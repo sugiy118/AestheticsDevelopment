@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -17,8 +18,8 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ds-Ho-osf" userLabel="Back Image View">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
                     </imageView>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zfj-Th-OYp">
-                        <rect key="frame" x="114" y="15" width="92" height="30"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Favorite Artist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lpj-Ap-eSr">
+                        <rect key="frame" x="8" y="161" width="304" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -34,38 +35,41 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EUy-Rd-unO">
                         <rect key="frame" x="123" y="52" width="75" height="75"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="75" id="QiY-zt-gGO"/>
-                            <constraint firstAttribute="width" constant="75" id="edH-cK-Mht"/>
+                            <constraint firstAttribute="width" constant="75" id="1M9-eA-k5K"/>
+                            <constraint firstAttribute="height" constant="75" id="hCZ-z8-hpm"/>
                         </constraints>
                     </imageView>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Favorite Artist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lpj-Ap-eSr">
-                        <rect key="frame" x="8" y="161" width="304" height="30"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaY-ks-yhL" userLabel="Name Label">
+                        <rect key="frame" x="139" y="23" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="YMk-Cr-i1y"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="EUy-Rd-unO" firstAttribute="top" secondItem="VaY-ks-yhL" secondAttribute="bottom" constant="8" id="961-By-STw"/>
+                    <constraint firstItem="VaY-ks-yhL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="AYk-Na-RpX"/>
                     <constraint firstAttribute="trailing" secondItem="Lpj-Ap-eSr" secondAttribute="trailing" constant="8" id="Gdl-FO-jjf"/>
+                    <constraint firstItem="VaY-ks-yhL" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="IQq-iX-3Py"/>
                     <constraint firstItem="Lpj-Ap-eSr" firstAttribute="top" secondItem="Lut-jM-NM9" secondAttribute="bottom" constant="8" id="JA0-7e-vwf"/>
-                    <constraint firstItem="Zfj-Th-OYp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="JeK-hk-inP"/>
+                    <constraint firstItem="EUy-Rd-unO" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="JSb-ZS-gH0"/>
                     <constraint firstItem="6Ds-Ho-osf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LAR-2G-8vJ"/>
-                    <constraint firstItem="Lpj-Ap-eSr" firstAttribute="top" secondItem="EUy-Rd-unO" secondAttribute="bottom" constant="34" id="Lib-iu-oZc"/>
                     <constraint firstItem="6Ds-Ho-osf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="S36-iG-8KO"/>
                     <constraint firstItem="Lpj-Ap-eSr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="b9C-2f-1qs"/>
                     <constraint firstAttribute="trailing" secondItem="6Ds-Ho-osf" secondAttribute="trailing" id="f09-WP-tEj"/>
                     <constraint firstItem="Lut-jM-NM9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hQ4-sO-HdE"/>
-                    <constraint firstItem="EUy-Rd-unO" firstAttribute="top" secondItem="Zfj-Th-OYp" secondAttribute="bottom" constant="7" id="k37-1t-J0C"/>
                     <constraint firstAttribute="bottom" secondItem="6Ds-Ho-osf" secondAttribute="bottom" id="nxW-qH-lUI"/>
                     <constraint firstAttribute="bottom" secondItem="Lpj-Ap-eSr" secondAttribute="bottom" constant="8" id="rDQ-no-nFL"/>
-                    <constraint firstItem="Zfj-Th-OYp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="wli-Ui-r1h"/>
-                    <constraint firstItem="EUy-Rd-unO" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="xrq-R5-Y7u"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="backImageView" destination="6Ds-Ho-osf" id="d1a-EJ-AvV"/>
                 <outlet property="favoriteTextField" destination="Lpj-Ap-eSr" id="KcY-jB-mjY"/>
                 <outlet property="finishedNumberLabel" destination="Lut-jM-NM9" id="xV0-vY-Wdu"/>
-                <outlet property="nameTextField" destination="Zfj-Th-OYp" id="AVI-sx-i9M"/>
+                <outlet property="nameLabel" destination="VaY-ks-yhL" id="pbC-kc-4lc"/>
                 <outlet property="userImageView" destination="EUy-Rd-unO" id="2UM-Pr-xNm"/>
             </connections>
         </tableViewCell>
