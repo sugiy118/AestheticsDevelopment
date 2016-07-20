@@ -9,6 +9,8 @@
 import UIKit
 
 class ContentsTableViewCell: UITableViewCell {
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var descript: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

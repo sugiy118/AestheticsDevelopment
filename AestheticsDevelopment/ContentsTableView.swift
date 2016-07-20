@@ -15,8 +15,8 @@ class ContentsTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         
         self.delegate = self
         self.dataSource = self
-        
         self.registerNib(UINib(nibName: "ContentsTopTableViewCell", bundle: nil), forCellReuseIdentifier: "ContentsTopTableViewCell")
+        self.registerNib(UINib(nibName: "ContentsTableViewCell", bundle: nil), forCellReuseIdentifier: "ContentsTableViewCell")
     }
     
     let blue = UIColor(red: 92.0 / 255, green: 192.0 / 255, blue: 210.0 / 255, alpha: 1.0)
@@ -25,25 +25,48 @@ class ContentsTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         fatalError("init(coder:) has not been implemented")
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+    
+//    func numberOfSesctionsInTableView(tableview: UITableView) -> Int{
+//        return 2
+//    }
+
     //セル数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if section == 0 {
+            return 1
+        } else {
+            return 10
+        }
     }
     
     //セル内容
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ContentsTopTableViewCell", forIndexPath: indexPath) as! ContentsTopTableViewCell
-        cell.locationImageView.image = UIImage(named: "tokyo_top_image")
-        cell.locationName.text = "TOKYO"
-        cell.imageMaskView.backgroundColor = blue
-        return cell
+                if indexPath.section == 0 {
+                    let cell = tableView.dequeueReusableCellWithIdentifier("ContentsTopTableViewCell", forIndexPath: indexPath) as! ContentsTopTableViewCell
+                    cell.locationImageView.image = UIImage(named: "tokyo_top_image")
+                    cell.locationName.text = "TOKYO"
+                    cell.imageMaskView.backgroundColor = blue
+                    return cell
+                } else {
+                    let cell = tableView.dequeueReusableCellWithIdentifier("ContentsTableViewCell", forIndexPath: indexPath) as! ContentsTableViewCell
+                    return cell
+                }
+        
     }
     
     //セルの高さ
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 200
+        if indexPath.section == 0 {
+            return 200
+        } else {
+            return 85
+        }
     }
 }
+
     
     
     /*
@@ -53,5 +76,3 @@ class ContentsTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         // Drawing code
     }
     */
-
-

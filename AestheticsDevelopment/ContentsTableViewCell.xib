@@ -39,6 +39,10 @@
                     <constraint firstAttribute="trailing" secondItem="WAu-tB-WKw" secondAttribute="trailing" constant="5" id="wtd-IH-aAV"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="descript" destination="Edd-Ih-44Y" id="KAe-mx-vbs"/>
+                <outlet property="title" destination="WAu-tB-WKw" id="xYg-WZ-aha"/>
+            </connections>
             <point key="canvasLocation" x="288" y="350.5"/>
         </tableViewCell>
     </objects>
