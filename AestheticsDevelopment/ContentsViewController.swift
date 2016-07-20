@@ -8,24 +8,38 @@
 
 import UIKit
 
-class ContentsViewController: UIViewController{
+class ContentsViewController: UIViewController, UITableViewDelegate{
     @IBOutlet weak var headerView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setContentsTableView(0)
+        
     }
+    
     
 
 
     func setContentsTableView(x: CGFloat){
         let frame = CGRectMake(x, 74, self.view.frame.width, self.view.frame.height)
         let contentsTableView = ContentsTableView(frame: frame, style: UITableViewStyle.Plain)
+        
+        contentsTableView.delegate = self
         self.view.addSubview(contentsTableView)
     }
    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("NextSegueToQuiz", sender: nil)
+    }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 200
+        } else {
+            return 85
+        }
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

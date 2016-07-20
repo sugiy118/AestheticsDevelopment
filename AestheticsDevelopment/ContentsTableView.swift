@@ -32,6 +32,12 @@ class ContentsTableView: UITableView, UITableViewDelegate, UITableViewDataSource
 //    func numberOfSesctionsInTableView(tableview: UITableView) -> Int{
 //        return 2
 //    }
+    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//       var controller = ContentsViewController()
+//        controller.performSegueWithIdentifier("NextSegueToQuiz", sender: controller)
+//
+//    }
 
     //セル数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,13 +64,13 @@ class ContentsTableView: UITableView, UITableViewDelegate, UITableViewDataSource
     }
     
     //セルの高さ
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 200
-        } else {
-            return 85
-        }
-    }
+//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        if indexPath.section == 0 {
+//            return 200
+//        } else {
+//            return 85
+//        }
+//    }
 }
 
     

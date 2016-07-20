@@ -187,7 +187,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="headerView" destination="UtA-ec-1LR" id="Hs9-Xz-aYS"/>
-                        <segue destination="Svy-S0-g9J" kind="show" id="zaf-NM-rAE"/>
+                        <segue destination="Svy-S0-g9J" kind="show" identifier="NextSegueToQuiz" id="zaf-NM-rAE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zgv-7J-vnT" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,7 +11,12 @@ import UIKit
 class ContentsTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var descript: UILabel!
+    @IBAction func tapTransitionBtn(sender: UIButton) {
+        
 
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -29,6 +29,15 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8u9-VN-9Hx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="tapTransitionBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oYz-77-1In"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="WAu-tB-WKw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="6YA-kP-4HC"/>
