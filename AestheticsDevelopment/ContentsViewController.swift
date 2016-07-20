@@ -8,29 +8,23 @@
 
 import UIKit
 
-class ContentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var contentsTableView: UITableView!
+class ContentsViewController: UIViewController{
+    @IBOutlet weak var headerView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentsTableView.delegate = self
-        contentsTableView.delegate = self
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "myCell")
-        cell.textLabel?.text = "：\(indexPath.section)"
-        cell.detailTextLabel?.text = "Information about Exibitions"
-        cell.imageView?.image = UIImage(named: "\(dogImageArray[indexPath.row]).png")
-        return cell
+        
+        setContentsTableView(0)
     }
     
 
-    
+
+    func setContentsTableView(x: CGFloat){
+        let frame = CGRectMake(x, 74, self.view.frame.width, self.view.frame.height)
+        let contentsTableView = ContentsTableView(frame: frame, style: UITableViewStyle.Plain)
+        self.view.addSubview(contentsTableView)
+    }
+   
     
 
     override func didReceiveMemoryWarning() {
