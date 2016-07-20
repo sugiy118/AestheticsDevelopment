@@ -12,6 +12,8 @@
 		0D0149141D3F584100D4B68D /* ContentsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0149131D3F584100D4B68D /* ContentsTableView.swift */; };
 		0D0149171D3F610B00D4B68D /* ContentsTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0149151D3F610B00D4B68D /* ContentsTopTableViewCell.swift */; };
 		0D0149181D3F610B00D4B68D /* ContentsTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D0149161D3F610B00D4B68D /* ContentsTopTableViewCell.xib */; };
+		0D01491B1D3F6C4C00D4B68D /* ContentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0149191D3F6C4C00D4B68D /* ContentsTableViewCell.swift */; };
+		0D01491C1D3F6C4C00D4B68D /* ContentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D01491A1D3F6C4C00D4B68D /* ContentsTableViewCell.xib */; };
 		0D2BBFF31D3E0EFB0077F803 /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBFF21D3E0EFB0077F803 /* MyPageTableViewController.swift */; };
 		0D2BBFF61D3E117E0077F803 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBFF41D3E117E0077F803 /* ProfileTableViewCell.swift */; };
 		0D2BBFF71D3E117E0077F803 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2BBFF51D3E117E0077F803 /* ProfileTableViewCell.xib */; };
@@ -50,6 +52,8 @@
 		0D0149131D3F584100D4B68D /* ContentsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsTableView.swift; sourceTree = "<group>"; };
 		0D0149151D3F610B00D4B68D /* ContentsTopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsTopTableViewCell.swift; sourceTree = "<group>"; };
 		0D0149161D3F610B00D4B68D /* ContentsTopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentsTopTableViewCell.xib; sourceTree = "<group>"; };
+		0D0149191D3F6C4C00D4B68D /* ContentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsTableViewCell.swift; sourceTree = "<group>"; };
+		0D01491A1D3F6C4C00D4B68D /* ContentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentsTableViewCell.xib; sourceTree = "<group>"; };
 		0D2BBFF21D3E0EFB0077F803 /* MyPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
 		0D2BBFF41D3E117E0077F803 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		0D2BBFF51D3E117E0077F803 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				0D0149131D3F584100D4B68D /* ContentsTableView.swift */,
 				0D0149151D3F610B00D4B68D /* ContentsTopTableViewCell.swift */,
 				0D0149161D3F610B00D4B68D /* ContentsTopTableViewCell.xib */,
+				0D0149191D3F6C4C00D4B68D /* ContentsTableViewCell.swift */,
+				0D01491A1D3F6C4C00D4B68D /* ContentsTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 				0D0149181D3F610B00D4B68D /* ContentsTopTableViewCell.xib in Resources */,
 				0DC77EBE1D3DE3D4005537FB /* LaunchScreen.storyboard in Resources */,
 				0D2BBFFD1D3E31C70077F803 /* background.jpg in Resources */,
+				0D01491C1D3F6C4C00D4B68D /* ContentsTableViewCell.xib in Resources */,
 				0D2BBFF71D3E117E0077F803 /* ProfileTableViewCell.xib in Resources */,
 				0DC77EBB1D3DE3D4005537FB /* Assets.xcassets in Resources */,
 				0DC77EB91D3DE3D4005537FB /* Main.storyboard in Resources */,
@@ -329,6 +336,7 @@
 				0D63C9771D3F3E760043B7FB /* TabBarController.swift in Sources */,
 				0D63C9751D3F39160043B7FB /* QuizViewController.swift in Sources */,
 				0D01490E1D3F480000D4B68D /* ContentsViewController.swift in Sources */,
+				0D01491B1D3F6C4C00D4B68D /* ContentsTableViewCell.swift in Sources */,
 				0D2BBFF61D3E117E0077F803 /* ProfileTableViewCell.swift in Sources */,
 				0DC77EB41D3DE3D4005537FB /* AppDelegate.swift in Sources */,
 				0D0149171D3F610B00D4B68D /* ContentsTopTableViewCell.swift in Sources */,

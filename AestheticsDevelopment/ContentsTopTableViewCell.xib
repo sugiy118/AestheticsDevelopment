@@ -51,8 +51,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="imageMaskView" destination="a9Y-dY-HdA" id="xcO-TC-PPQ"/>
+                <outlet property="locationImageView" destination="HRL-Ak-Sc2" id="hSc-rM-6X8"/>
                 <outlet property="locationName" destination="fI4-W3-Rxl" id="6N9-Pn-Wob"/>
-                <outlet property="siteImageView" destination="HRL-Ak-Sc2" id="p2M-ep-vGj"/>
             </connections>
             <point key="canvasLocation" x="287.5" y="324"/>
         </tableViewCell>
