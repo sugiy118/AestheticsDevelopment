@@ -29,10 +29,6 @@ class ContentsTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         return 2
     }
     
-//    func numberOfSesctionsInTableView(tableview: UITableView) -> Int{
-//        return 2
-//    }
-    
 //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 //       var controller = ContentsViewController()
 //        controller.performSegueWithIdentifier("NextSegueToQuiz", sender: controller)

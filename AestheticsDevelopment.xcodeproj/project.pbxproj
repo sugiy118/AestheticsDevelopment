@@ -14,6 +14,7 @@
 		0D0149181D3F610B00D4B68D /* ContentsTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D0149161D3F610B00D4B68D /* ContentsTopTableViewCell.xib */; };
 		0D01491B1D3F6C4C00D4B68D /* ContentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0149191D3F6C4C00D4B68D /* ContentsTableViewCell.swift */; };
 		0D01491C1D3F6C4C00D4B68D /* ContentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D01491A1D3F6C4C00D4B68D /* ContentsTableViewCell.xib */; };
+		0D01493C1D3FA22000D4B68D /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01493B1D3FA22000D4B68D /* Questions.swift */; };
 		0D2BBFF31D3E0EFB0077F803 /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBFF21D3E0EFB0077F803 /* MyPageTableViewController.swift */; };
 		0D2BBFF61D3E117E0077F803 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBFF41D3E117E0077F803 /* ProfileTableViewCell.swift */; };
 		0D2BBFF71D3E117E0077F803 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2BBFF51D3E117E0077F803 /* ProfileTableViewCell.xib */; };
@@ -54,6 +55,7 @@
 		0D0149161D3F610B00D4B68D /* ContentsTopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentsTopTableViewCell.xib; sourceTree = "<group>"; };
 		0D0149191D3F6C4C00D4B68D /* ContentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsTableViewCell.swift; sourceTree = "<group>"; };
 		0D01491A1D3F6C4C00D4B68D /* ContentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentsTableViewCell.xib; sourceTree = "<group>"; };
+		0D01493B1D3FA22000D4B68D /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		0D2BBFF21D3E0EFB0077F803 /* MyPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
 		0D2BBFF41D3E117E0077F803 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		0D2BBFF51D3E117E0077F803 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		0D2BBFEE1D3E0E650077F803 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0D01493B1D3FA22000D4B68D /* Questions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				0D63C9771D3F3E760043B7FB /* TabBarController.swift in Sources */,
 				0D63C9751D3F39160043B7FB /* QuizViewController.swift in Sources */,
 				0D01490E1D3F480000D4B68D /* ContentsViewController.swift in Sources */,
+				0D01493C1D3FA22000D4B68D /* Questions.swift in Sources */,
 				0D01491B1D3F6C4C00D4B68D /* ContentsTableViewCell.swift in Sources */,
 				0D2BBFF61D3E117E0077F803 /* ProfileTableViewCell.swift in Sources */,
 				0DC77EB41D3DE3D4005537FB /* AppDelegate.swift in Sources */,

@@ -17,9 +17,7 @@ class ContentsViewController: UIViewController, UITableViewDelegate{
         
     }
     
-    
-
-
+   
     func setContentsTableView(x: CGFloat){
         let frame = CGRectMake(x, 74, self.view.frame.width, self.view.frame.height)
         let contentsTableView = ContentsTableView(frame: frame, style: UITableViewStyle.Plain)
@@ -39,6 +37,7 @@ class ContentsViewController: UIViewController, UITableViewDelegate{
             return 85
         }
     }
+
 
 
     override func didReceiveMemoryWarning() {

@@ -16,7 +16,7 @@ class ContentsTopTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+    
     setLocationImageView()
     setImageMaskView()
     setNameLabel()
