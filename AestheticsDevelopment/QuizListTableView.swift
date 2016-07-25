@@ -10,7 +10,11 @@ import UIKit
 
 class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
-//    let quizsetCollection = QuizsetCollection.sharedInstance
+    var locationName: String!
+    var locationImageName: String!
+    var color: UIColor!
+    
+    let quizsetCollection = QuizsetCollection.sharedInstance
 
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
@@ -18,18 +22,15 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         self.dataSource = self
         self.registerNib(UINib(nibName: "ContentsTopTableViewCell", bundle: nil), forCellReuseIdentifier: "ContentsTopTableViewCell")
         self.registerNib(UINib(nibName: "QuizsetsTableViewCell", bundle: nil), forCellReuseIdentifier: "QuizsetsTableViewCell")
-        
-//        quizsetCollection.fetchQuizsets{ () in
-//            self.tableView.reloadData
-//        }
-        
     }
 
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     let blue = UIColor(red: 92.0 / 255, green: 192.0 / 255, blue: 210.0 / 255, alpha: 1.0)
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
@@ -55,13 +56,15 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCellWithIdentifier("QuizsetsTableViewCell", forIndexPath: indexPath) as! QuizsetsTableViewCell
-       
+                    let quiz = quizsetCollection.quizsets[indexPath.row]
+                    cell.titleLabel.text = "題名"
+                    cell.quizCategoryLabel.text = quiz.quizcategory
                     return cell
                 }
     }
     
 
-//    セルの高さ
+    //セルの高さ
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return 200
