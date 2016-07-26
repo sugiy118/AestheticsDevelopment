@@ -9,8 +9,14 @@
 import UIKit
 
 class QuizsetCollection: NSObject {
-    static let sharedInstance = QuizsetCollection()
+    
+      static let sharedInstance = QuizsetCollection()
+
     var quizsets: [Quizset] = []
+
+//    var quizarea = ""
+//    init(place: String){
+//    }
     
     func fetchQuizsets(callback: () -> Void) {
         let query = NCMBQuery(className: "Quiz")
@@ -28,5 +34,7 @@ class QuizsetCollection: NSObject {
                 }
             }
         }
+    
+
     }
     

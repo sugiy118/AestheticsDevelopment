@@ -14,16 +14,17 @@ import UIKit
 }
 
 class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
+
+    var quizsetCollection = QuizsetCollection.sharedInstance
     
     weak var customDelegate: QuizListTableViewDelegate?
     var locationName: String!
     var locationImageName: String!
     var color: UIColor!
     
-    let quizsetCollection = QuizsetCollection.sharedInstance
-
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
+       
         self.delegate = self
         self.dataSource = self
         self.registerNib(UINib(nibName: "ContentsTopTableViewCell", bundle: nil), forCellReuseIdentifier: "ContentsTopTableViewCell")
@@ -85,6 +86,7 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
             self.customDelegate?.didSelectTableViewCell()
         }
     }
+    
     
 }
 
