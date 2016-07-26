@@ -8,13 +8,11 @@
 
 import UIKit
 
-//class QuizListViewController: UIViewController, UITableViewDelegate{
-
-    class QuizListViewController: UIViewController, UIScrollViewDelegate{
+    class QuizListViewController: UIViewController, UIScrollViewDelegate, QuizListTableViewDelegate{
         
         @IBOutlet weak var headerView: UIView!
         @IBOutlet weak var locationsScrollView: UIScrollView!
-
+        
         let quizsetCollection = QuizsetCollection.sharedInstance
 
         let tokyo = "TOKYO"
@@ -35,17 +33,22 @@ import UIKit
             
             self.locationsScrollView.contentSize = CGSizeMake(self.view.frame.width * 3, self.locationsScrollView.frame.height)
             self.locationsScrollView.pagingEnabled = true
-            
 
             setQuizListTableView(0, locationName: tokyo, locationImageName: tokyoImageName, color: blue)
             setQuizListTableView(self.view.frame.width, locationName: kyoto, locationImageName: kyotoImageName, color: red)
             setQuizListTableView(self.view.frame.width * 2,locationName: fukuoka, locationImageName: fukuokaImageName, color: green)
 
+            
+
+            
             quizsetCollection.fetchQuizsets {() in
                 self.setQuizListTableView(0, locationName: self.tokyo, locationImageName: self.tokyoImageName, color: self.blue).reloadData()
                 self.setQuizListTableView(self.view.frame.width, locationName: self.kyoto, locationImageName: self.kyotoImageName, color: self.red).reloadData()
                 self.setQuizListTableView(self.view.frame.width * 2,locationName: self.fukuoka, locationImageName: self.fukuokaImageName, color: self.green)
             }
+
+
+            
         }
         
         func post() {
@@ -56,6 +59,7 @@ import UIKit
             let frame = CGRectMake(x, 0, self.view.frame.width, locationsScrollView.frame.height)
             let quizListTableView = QuizListTableView(frame: frame, style: UITableViewStyle.Plain)
             
+            quizListTableView.customDelegate = self
             quizListTableView.locationName = locationName
             quizListTableView.locationImageName = locationImageName
             quizListTableView.color = color
@@ -63,9 +67,16 @@ import UIKit
             return quizListTableView
         }
         
+        func didSelectTableViewCell() {
+            print("セルがタップされました。")
+            self.performSegueWithIdentifier("ShowToProblemViewController", sender: nil)
+        }
+        
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
         }
+        
+        
 
 }
 

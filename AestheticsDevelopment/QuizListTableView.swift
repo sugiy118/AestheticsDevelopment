@@ -8,8 +8,14 @@
 
 import UIKit
 
+@objc protocol QuizListTableViewDelegate{
+    func didSelectTableViewCell()
+    
+}
+
 class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
+    weak var customDelegate: QuizListTableViewDelegate?
     var locationName: String!
     var locationImageName: String!
     var color: UIColor!
@@ -70,6 +76,13 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
             return 200
         } else {
             return 85
+        }
+    }
+    
+    //タップされた時に次の画面に移動するDelegate
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section != 0 {
+            self.customDelegate?.didSelectTableViewCell()
         }
     }
     

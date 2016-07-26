@@ -24,9 +24,9 @@ class QuizsetCollection: NSObject {
                     let quizset = Quizset(text: quizCategory)
                     self.quizsets.append(quizset)
                     callback()
+                    }
                 }
             }
         }
     }
     
-}

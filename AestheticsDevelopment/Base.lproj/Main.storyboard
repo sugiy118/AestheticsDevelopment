@@ -56,17 +56,17 @@
                     <connections>
                         <outlet property="headerView" destination="HgC-IL-uTB" id="q6b-2O-QuK"/>
                         <outlet property="locationsScrollView" destination="dAN-uR-tHZ" id="aiL-bZ-d9L"/>
-                        <segue destination="mso-Nk-xih" kind="show" id="cZx-8g-k5c"/>
+                        <segue destination="mso-Nk-xih" kind="show" identifier="ShowToProblemViewController" id="IsZ-zc-9cR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dt8-5G-g6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="918.5" y="-774.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Problem View Controller-->
         <scene sceneID="GEK-7c-wVC">
             <objects>
-                <viewController id="mso-Nk-xih" sceneMemberID="viewController">
+                <viewController id="mso-Nk-xih" userLabel="Problem View Controller" customClass="ProblemViewController" customModule="AestheticsDevelopment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WNK-wg-tdV"/>
                         <viewControllerLayoutGuide type="bottom" id="1k4-iN-e7G"/>

@@ -26,6 +26,7 @@
 		0D2E76241D4611FA00DBF6B7 /* kyoto_top_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E76211D4611FA00DBF6B7 /* kyoto_top_image.png */; };
 		0D2E76251D4611FA00DBF6B7 /* tokyo_top_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E76221D4611FA00DBF6B7 /* tokyo_top_image.png */; };
 		0D63C9771D3F3E760043B7FB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63C9761D3F3E760043B7FB /* TabBarController.swift */; };
+		0D70BFC61D472FAB00C6AFD5 /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D70BFC51D472FAB00C6AFD5 /* ProblemViewController.swift */; };
 		0DC77EB41D3DE3D4005537FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC77EB31D3DE3D4005537FB /* AppDelegate.swift */; };
 		0DC77EB91D3DE3D4005537FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC77EB71D3DE3D4005537FB /* Main.storyboard */; };
 		0DC77EBB1D3DE3D4005537FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC77EBA1D3DE3D4005537FB /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		0D2E76211D4611FA00DBF6B7 /* kyoto_top_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kyoto_top_image.png; sourceTree = "<group>"; };
 		0D2E76221D4611FA00DBF6B7 /* tokyo_top_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tokyo_top_image.png; sourceTree = "<group>"; };
 		0D63C9761D3F3E760043B7FB /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0D70BFC51D472FAB00C6AFD5 /* ProblemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemViewController.swift; sourceTree = "<group>"; };
 		0DC77EB01D3DE3D4005537FB /* AestheticsDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AestheticsDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC77EB31D3DE3D4005537FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DC77EB81D3DE3D4005537FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				0D2BBFF21D3E0EFB0077F803 /* MyPageTableViewController.swift */,
 				0D63C9761D3F3E760043B7FB /* TabBarController.swift */,
 				0D01490D1D3F480000D4B68D /* QuizListViewController.swift */,
+				0D70BFC51D472FAB00C6AFD5 /* ProblemViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				0D01491B1D3F6C4C00D4B68D /* QuizsetsTableViewCell.swift in Sources */,
 				0D2BBFF61D3E117E0077F803 /* ProfileTableViewCell.swift in Sources */,
 				0DC77EB41D3DE3D4005537FB /* AppDelegate.swift in Sources */,
+				0D70BFC61D472FAB00C6AFD5 /* ProblemViewController.swift in Sources */,
 				0D0149171D3F610B00D4B68D /* ContentsTopTableViewCell.swift in Sources */,
 				0D0149141D3F584100D4B68D /* QuizListTableView.swift in Sources */,
 				0D2BBFF31D3E0EFB0077F803 /* MyPageTableViewController.swift in Sources */,

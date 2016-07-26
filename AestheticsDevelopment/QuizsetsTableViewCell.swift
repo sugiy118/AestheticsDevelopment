@@ -10,9 +10,8 @@ import UIKit
 
 class QuizsetsTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var quizCategoryLabel: UILabel!
-    
-    
+    @IBOutlet weak var  quizCategoryLabel: UILabel!
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
