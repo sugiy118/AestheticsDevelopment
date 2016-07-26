@@ -50,9 +50,9 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
                 if indexPath.section == 0 {
                     let cell = tableView.dequeueReusableCellWithIdentifier("ContentsTopTableViewCell", forIndexPath: indexPath) as! ContentsTopTableViewCell
-                    cell.locationImageView.image = UIImage(named: "tokyo_top_image")
-                    cell.locationName.text = "TOKYO"
-                    cell.imageMaskView.backgroundColor = blue
+                    cell.locationImageView.image = UIImage(named: self.locationImageName)
+                    cell.locationName.text = self.locationName
+                    cell.imageMaskView.backgroundColor = self.color
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCellWithIdentifier("QuizsetsTableViewCell", forIndexPath: indexPath) as! QuizsetsTableViewCell
@@ -84,11 +84,3 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         // Drawing code
     }
     */
-
-
-
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//       var controller = QuizListTableViewController()
-//        controller.performSegueWithIdentifier("NextSegueToQuiz", sender: controller)
-//
-//    }

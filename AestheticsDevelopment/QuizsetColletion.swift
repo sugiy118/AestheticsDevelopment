@@ -11,7 +11,6 @@ import UIKit
 class QuizsetCollection: NSObject {
     static let sharedInstance = QuizsetCollection()
     var quizsets: [Quizset] = []
-    //    var quizzes: [Quizset] = []
     
     func fetchQuizsets(callback: () -> Void) {
         let query = NCMBQuery(className: "Quiz")

@@ -10,10 +10,8 @@ import UIKit
 class Quizset: NSObject {
     //    var quizzes:[Quiz] = []
     var quizcategory: String
-    //    var quizname: String
     
     init(text: String) {
         self.quizcategory = text
-        //        self.quizname = text
     }
 }
