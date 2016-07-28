@@ -10,21 +10,25 @@ import UIKit
 
 @objc protocol QuizListTableViewDelegate{
     func didSelectTableViewCell()
-    
 }
 
 class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
 
-    var quizsetCollection = QuizsetCollection.sharedInstance
+    var quizcategoryCollection = QuizcategoryCollection.sharedInstance
     
     weak var customDelegate: QuizListTableViewDelegate?
     var locationName: String!
     var locationImageName: String!
     var color: UIColor!
     
+//    var quizzes:Array<Quiz> = []
+    
+//    var elementName = ""
+    
+    
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
-       
+        
         self.delegate = self
         self.dataSource = self
         self.registerNib(UINib(nibName: "ContentsTopTableViewCell", bundle: nil), forCellReuseIdentifier: "ContentsTopTableViewCell")
@@ -48,7 +52,7 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         if section == 0 {
             return 1
         } else {
-            return  quizsetCollection.quizsets.count
+            return  quizcategoryCollection.quizcategories.count
         }
     }
     
@@ -63,7 +67,7 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCellWithIdentifier("QuizsetsTableViewCell", forIndexPath: indexPath) as! QuizsetsTableViewCell
-                    let quiz = quizsetCollection.quizsets[indexPath.row]
+                    let quiz = quizcategoryCollection.quizcategories[indexPath.row]
                     cell.titleLabel.text = "題名"
                     cell.quizCategoryLabel.text = quiz.quizcategory
                     return cell
@@ -83,6 +87,7 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
     //タップされた時に次の画面に移動するDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section != 0 {
+//            let quiz = quizzes[indexPath.row]
             self.customDelegate?.didSelectTableViewCell()
         }
     }

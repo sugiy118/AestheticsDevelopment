@@ -1,5 +1,5 @@
 //
-//  QuestionsColletion.swift
+//  QuizcategoryColletion.swift
 //  AestheticsDevelopment
 //
 //  Created by YU SUGIYAMA on 2016/07/21.
@@ -8,27 +8,22 @@
 
 import UIKit
 
-class QuizsetCollection: NSObject {
+class QuizcategoryCollection: NSObject {
     
-      static let sharedInstance = QuizsetCollection()
+    static let sharedInstance = QuizcategoryCollection()
+    var quizcategories: [Quiz] = []
 
-    var quizsets: [Quizset] = []
-
-//    var quizarea = ""
-//    init(place: String){
-//    }
-    
-    func fetchQuizsets(callback: () -> Void) {
+    func fetchQuizcategories(callback: () -> Void) {
         let query = NCMBQuery(className: "Quiz")
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if error == nil {
-                self.quizsets = []
+                self.quizcategories = []
                 for object in objects {
-                    //let x = object.objectForKey("categoryNumber") as! Int
                     let quizCategory = object.objectForKey("quizCategory") as! String
                     print(quizCategory)
-                    let quizset = Quizset(text: quizCategory)
-                    self.quizsets.append(quizset)
+                    let quizcategory = Quiz()
+                    quizcategory.getCagetory(quizCategory)
+                    self.quizcategories.append(quizcategory)
                     callback()
                     }
                 }
@@ -37,4 +32,4 @@ class QuizsetCollection: NSObject {
     
 
     }
-    
+

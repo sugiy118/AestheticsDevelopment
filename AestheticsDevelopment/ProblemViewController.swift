@@ -8,12 +8,21 @@
 
 import UIKit
 
-class ProblemViewController: UIViewController {
+class ProblemViewController: UIViewController{
+    @IBOutlet weak var problemNumberLabel: UILabel!
+    @IBOutlet weak var answer1Label: UILabel!
+    @IBOutlet weak var answer2Label: UILabel!
+    @IBOutlet weak var answer3Label: UILabel!
+    @IBOutlet weak var answer4Label: UILabel!
 
+    var quiz: Quiz!
+
+    //    let quizzes = Quizzes()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
