@@ -28,28 +28,27 @@ import UIKit
 
         let quizcategoryCollection = QuizcategoryCollection.sharedInstance
 
+        var currentSelectedQuiz: Quiz?
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            let hoge = setQuizListTableView(0, locationName: self.tokyo, locationImageName: self.tokyoImageName, color: self.blue)
+            
             quizcategoryCollection.fetchQuizcategories {
-                self.setQuizListTableView(0, locationName: self.tokyo, locationImageName: self.tokyoImageName, color: self.blue).reloadData()
-// 画面3倍の場合に下記を追加
-//                self.setQuizListTableView(self.view.frame.width, locationName: self.kyoto, locationImageName: self.kyotoImageName, color: self.red).reloadData()
-//                self.setQuizListTableView(self.view.frame.width * 2,locationName: self.fukuoka, locationImageName: self.fukuokaImageName, color: self.green)
+                hoge.reloadData()
+                print(#function)
             }
             
-            
             self.locationsScrollView.contentSize = CGSizeMake(self.view.frame.width, self.locationsScrollView.frame.height)
-// 画面3倍の場合に下記を追加
-//            self.locationsScrollView.contentSize = CGSizeMake(self.view.frame.width * 3, self.locationsScrollView.frame.height)
-
             self.locationsScrollView.pagingEnabled = true
 
-            setQuizListTableView(0, locationName: tokyo, locationImageName: tokyoImageName, color: blue)
-
-// 画面3倍の場合に下記を追加
-//            setQuizListTableView(self.view.frame.width, locationName: kyoto, locationImageName: kyotoImageName, color: red)
-//            setQuizListTableView(self.view.frame.width * 2,locationName: fukuoka, locationImageName: fukuokaImageName, color: green)
+            
+    // 画面3倍の場合に必要になる情報
+    //                self.setQuizListTableView(self.view.frame.width, locationName: self.kyoto, locationImageName: self.kyotoImageName, color: self.red).reloadData()
+    //                self.setQuizListTableView(self.view.frame.width * 2,locationName: self.fukuoka, locationImageName: self.fukuokaImageName, color: self.green)
+    
+    //            self.locationsScrollView.contentSize = CGSizeMake(self.view.frame.width * 3, self.locationsScrollView.frame.height)
+    
 
         }
         
@@ -65,15 +64,16 @@ import UIKit
             return quizListTableView
         }
         
-        func didSelectTableViewCell() {
+        func didSelectTableViewCell(quiz: Quiz) {
             print("セルがタップされました。")
+            self.currentSelectedQuiz = quiz
             self.performSegueWithIdentifier("ShowToProblemViewController", sender: nil)
         }
         
-//        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//            let problemViewController = segue.destinationViewController as! ProblemViewController
-////            problemViewController.quiz = self.currentSelectedQuiz
-//        }
+        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            let problemViewController = segue.destinationViewController as! ProblemViewController
+            problemViewController.quiz = self.currentSelectedQuiz
+        }
         
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()

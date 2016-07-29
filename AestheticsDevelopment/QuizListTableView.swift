@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol QuizListTableViewDelegate{
-    func didSelectTableViewCell()
+    func didSelectTableViewCell(quiz:Quiz)
 }
 
 class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
@@ -17,13 +17,15 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
     var quizcategoryCollection = QuizcategoryCollection.sharedInstance
     
     weak var customDelegate: QuizListTableViewDelegate?
+
     var locationName: String!
     var locationImageName: String!
     var color: UIColor!
+
+    //タグを代入するための変数
+    var elementName = ""
+    var quizzes:Array<Quiz> = []
     
-//    var quizzes:Array<Quiz> = []
-    
-//    var elementName = ""
     
     
     override init(frame: CGRect, style: UITableViewStyle) {
@@ -52,7 +54,7 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         if section == 0 {
             return 1
         } else {
-            return  quizcategoryCollection.quizcategories.count
+            return  quizcategoryCollection.quizzes.count
         }
     }
     
@@ -67,7 +69,7 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCellWithIdentifier("QuizsetsTableViewCell", forIndexPath: indexPath) as! QuizsetsTableViewCell
-                    let quiz = quizcategoryCollection.quizcategories[indexPath.row]
+                    let quiz = quizcategoryCollection.quizzes[indexPath.row]
                     cell.titleLabel.text = "題名"
                     cell.quizCategoryLabel.text = quiz.quizcategory
                     return cell
@@ -87,20 +89,11 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
     //タップされた時に次の画面に移動するDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section != 0 {
+            let quiz = quizcategoryCollection.quizzes[indexPath.row]
 //            let quiz = quizzes[indexPath.row]
-            self.customDelegate?.didSelectTableViewCell()
+            self.customDelegate?.didSelectTableViewCell(quiz)
         }
     }
     
     
 }
-
-    
-    
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */

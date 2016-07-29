@@ -15,19 +15,22 @@ class Quiz: NSObject {
     var answer2: String = ""
     var answer3: String = ""
     var answer4: String = ""
-    
 
     func getCagetory(text: String) {
         self.quizcategory = text
     }
     
-    func makeQuizset(question: String, answer1: String, answer2: String, answer3: String, answer4: String) {
+    func makeQuizquestion(question: String) {
         self.question = question
+    }
+    
+    func makeQuizanswers(answer1: String, answer2: String, answer3: String, answer4: String) {
         self.answer1 = answer1
         self.answer2 = answer2
         self.answer3 = answer3
         self.answer4 = answer4
     }
+
 
 }
 

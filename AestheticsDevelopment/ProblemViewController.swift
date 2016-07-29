@@ -9,36 +9,30 @@
 import UIKit
 
 class ProblemViewController: UIViewController{
-    @IBOutlet weak var problemNumberLabel: UILabel!
-    @IBOutlet weak var answer1Label: UILabel!
-    @IBOutlet weak var answer2Label: UILabel!
-    @IBOutlet weak var answer3Label: UILabel!
-    @IBOutlet weak var answer4Label: UILabel!
-
+    
     var quiz: Quiz!
-
-    //    let quizzes = Quizzes()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        print(self.quiz.quizcategory)
+//        quizSet.fetchQuizanswers {
+//            self.setProblemListTableView(0).reloadData()
+//        }
+//        quizSet.fetchQuizquestion {
+//            self.setProblemListTableView(0).reloadData()
+//        }
+        setProblemListTableView(0)
+    }
+    
+    func setProblemListTableView(x: CGFloat) -> UITableView{
+        let frame = CGRectMake(x, 0, self.view.frame.width, self.view.frame.height)
+        let problemListTableView = ProblemListTableView(frame: frame, style: UITableViewStyle.Plain)
+        return problemListTableView
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
