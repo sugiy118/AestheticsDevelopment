@@ -9,14 +9,23 @@
 import UIKit
 
 class ProblemTopTableViewCell: UITableViewCell {
+    @IBOutlet weak var problemColorView: UIView!
     @IBOutlet weak var quizName: UILabel!
 
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+
+        setProblemColorView()
         setQuizName()
-        
+
+    }
+    
+    func setProblemColorView(){
+        self.problemColorView.contentMode = UIViewContentMode.ScaleAspectFill
+        self.problemColorView.layer.masksToBounds = true
+            
     }
     
     
@@ -30,7 +39,6 @@ class ProblemTopTableViewCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

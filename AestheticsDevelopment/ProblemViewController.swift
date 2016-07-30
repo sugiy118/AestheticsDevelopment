@@ -9,25 +9,51 @@
 import UIKit
 
 class ProblemViewController: UIViewController{
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var problemScrollView: UIScrollView!
     
-    var quiz: Quiz!
+    var quiz = Quiz()
+    let quizCollection = QuizCollection.sharedInstance
+    let quizSet = Quiz.sharedInstance
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(self.quiz.quizcategory)
-//        quizSet.fetchQuizanswers {
-//            self.setProblemListTableView(0).reloadData()
-//        }
-//        quizSet.fetchQuizquestion {
-//            self.setProblemListTableView(0).reloadData()
-//        }
+        self.problemScrollView.contentSize = CGSizeMake(self.view.frame.width * 5, self.problemScrollView.frame.height)
+        self.problemScrollView.pagingEnabled = true
+        
+        print(self.quiz.categoryNumber)
+
+        let hogehoge = setProblemListTableView(0)
+        
+        quizSet.fetchQuizquestion(quiz) {
+            hogehoge.reloadData()
+        }
+        
+        quizSet.fetchQuizanswers(quiz) { 
+            hogehoge.reloadData()
+        }
+        
         setProblemListTableView(0)
+
+        
+        
+        //こちらがわではfetchはせず、QuizLisstViewControllerでfetchしたものを渡す
+//        quizCollection.fetchQuizquestion(quiz) { 
+//            hogehoge.reloadData()
+//        }
+        
+//            for object in self.quizCollection.quizanswers {
+//                let a = self.quizCollection.quizanswers[0]
+//                print(self.quiz.answer1)
+//                print(self.quiz.answer2)
     }
     
     func setProblemListTableView(x: CGFloat) -> UITableView{
         let frame = CGRectMake(x, 0, self.view.frame.width, self.view.frame.height)
         let problemListTableView = ProblemListTableView(frame: frame, style: UITableViewStyle.Plain)
+        self.problemScrollView.addSubview(problemListTableView)
         return problemListTableView
     }
 

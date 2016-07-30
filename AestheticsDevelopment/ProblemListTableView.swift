@@ -8,10 +8,14 @@
 
 import UIKit
 
+
+
 class ProblemListTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
 
-    var quizSet = QuizSet()
+    var quizCollection = QuizCollection.sharedInstance
+    var quizSet = Quiz.sharedInstance
     
+    var quizName: String!
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
@@ -26,33 +30,49 @@ class ProblemListTableView: UITableView, UITableViewDelegate, UITableViewDataSou
         fatalError("init(coder:) has not been implemented")
     }
     
-
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
     
+    //セル数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         } else {
-            return 4
+            return 1
         }
     }
 
+    //セルの内容
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("ProblemTopTableViewCell", forIndexPath: indexPath) as! ProblemTopTableViewCell
-            let quizquestion = quizSet.quizquestions[indexPath.row]
-            cell.quizName.text = quizquestion.question
+//            let quizset = quizSet.quizquestions
+            cell.quizName.text = quizSet.answer1
             return cell
+            
         } else {
+            
             let cell = tableView.dequeueReusableCellWithIdentifier("ProblemTableViewCell", forIndexPath: indexPath) as! ProblemTableViewCell
-            let quizanswer = quizSet.quizanswers[indexPath.row]
-            cell.answer1Label.text = quizanswer.answer1
-            cell.answer2Label.text = quizanswer.answer2
-            cell.answer3Label.text = quizanswer.answer3
-            cell.answer4Label.text = quizanswer.answer4
+            
+//            let quizanswer = quizCollection.quizanswers[indexPath.row]
+
+            cell.answer1Label.text = "あ"
+            cell.answer2Label.text = "い"
+            cell.answer3Label.text = "う"
+            cell.answer4Label.text = "え"
+            
             return cell
+        }
+    }
+    
+    //セルの高さ
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 200
+        } else {
+            return 340
         }
     }
 }
