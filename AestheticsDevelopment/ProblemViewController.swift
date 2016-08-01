@@ -12,10 +12,12 @@ class ProblemViewController: UIViewController{
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var problemScrollView: UIScrollView!
     
-    var quiz = Quiz()
-    let quizCollection = QuizCollection.sharedInstance
-    let quizSet = Quiz.sharedInstance
+//
+//    let quizCollection = QuizCollection.sharedInstance
 
+//    var quiz = Quiz()
+    var quiz = Quiz()
+    var quizManager = QuizManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,17 +25,31 @@ class ProblemViewController: UIViewController{
         self.problemScrollView.contentSize = CGSizeMake(self.view.frame.width * 5, self.problemScrollView.frame.height)
         self.problemScrollView.pagingEnabled = true
         
-        print(self.quiz.categoryNumber)
+        print("\(self.quiz.quiznumber)kkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
 
         let hogehoge = setProblemListTableView(0)
         
-        quizSet.fetchQuizquestion(quiz) {
+        quizManager.fetchQuizcategories {
+            print("callback!!!!!!!!!!!!!!!!")
             hogehoge.reloadData()
+            
         }
         
-        quizSet.fetchQuizanswers(quiz) { 
-            hogehoge.reloadData()
-        }
+        
+        
+        
+//        quizCollection.fetchQuizquestion(quizCollection) {
+//            hogehoge.reloadData()
+//
+//            print("\(self.quiz.categoryNumber)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+//        }
+//        
+//        quiz.fetchQuizanswers(quizCollection) {
+//            hogehoge.reloadData()
+//        }
+//        
+        
+        
         
         setProblemListTableView(0)
 

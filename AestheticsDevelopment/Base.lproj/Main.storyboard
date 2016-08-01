@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dt8-5G-g6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918.5" y="-774.5"/>
+            <point key="canvasLocation" x="909.5" y="-774.5"/>
         </scene>
         <!--Problem View Controller-->
         <scene sceneID="GEK-7c-wVC">
@@ -131,7 +131,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oY6-Y8-LuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909.5" y="20.5"/>
+            <point key="canvasLocation" x="918.5" y="3.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ch8-kQ-anZ">
@@ -156,6 +156,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8e-4d-QEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="405.5" y="3.5"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="280-HH-wDz">
+            <objects>
+                <viewController id="SbK-Hl-frf" customClass="LoginViewController" customModule="AestheticsDevelopment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xXD-4Z-uLq"/>
+                        <viewControllerLayoutGuide type="bottom" id="VmF-Gw-Fye"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8vi-rq-slI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mko-I8-Knz">
+                                <rect key="frame" x="20" y="262" width="160" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapLoginButton:" destination="SbK-Hl-frf" eventType="touchUpInside" id="Mlh-Ms-bH8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8Y-BQ-Bku">
+                                <rect key="frame" x="20" y="124" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="up0-w4-EwX">
+                                <rect key="frame" x="20" y="178" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqP-Xk-Ph2">
+                                <rect key="frame" x="195" y="262" width="160" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapSignUpButon:" destination="SbK-Hl-frf" eventType="touchUpInside" id="CVM-H3-NQd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JDf-Zy-Dg6"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="N8Y-BQ-Bku" id="iF1-rM-OFc"/>
+                        <outlet property="passwordTextField" destination="up0-w4-EwX" id="VEU-p3-3vM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Csv-ih-bOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1386.5" y="-1559.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bPe-7c-Dkh">
@@ -196,6 +252,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lw9-sQ-s3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="405.5" y="-774.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oL8-jG-J1P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8PA-dp-bJH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kmd-si-D7s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SbK-Hl-frf" kind="relationship" relationship="rootViewController" id="eUs-XG-0wi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAF-QB-SA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909.5" y="-1559.5"/>
         </scene>
     </scenes>
 </document>

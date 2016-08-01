@@ -11,6 +11,10 @@ import UIKit
     class QuizListViewController: UIViewController, UIScrollViewDelegate, QuizListTableViewDelegate{
         @IBOutlet weak var headerView: UIView!
         @IBOutlet weak var locationsScrollView: UIScrollView!
+
+        let quizManager = QuizManager.sharedInstance
+        let questionManager = QuestionManager.sharedInstance
+        let answerManager = AnswerManager.sharedInstance
         
         let tokyo = "TOKYO"
         let tokyoImageName = "tokyo_top_image.png"
@@ -19,13 +23,8 @@ import UIKit
         let green = UIColor(red: 105.0 / 255, green: 207.0 / 255, blue: 153.0 / 255, alpha: 1.0)
         let red = UIColor(red: 195.0 / 255, green: 123.0 / 255, blue: 175.0 / 255, alpha: 1.0)
 	
-        let quizCollection = QuizCollection.sharedInstance
-        let quizSet = Quiz.sharedInstance
         
-        var currentSelectedQuiz = Quiz()
-        
-        //画面遷移後に入れる5問のデータを入れておく場所
-        let quizsets:[Quiz] = []
+        var currentSelectedQuiz : Quiz?
 
         
         override func viewDidLoad() {
@@ -33,16 +32,12 @@ import UIKit
             let hoge = setQuizListTableView(0, locationName: self.tokyo, locationImageName: self.tokyoImageName, color: self.blue)
             
             
-            quizCollection.fetchQuizcategories {
+            quizManager.fetchQuizcategories {
                 hoge.reloadData()
                 print(#function)
             }
             
-            
-//            quizCollection.fetchQuizanswers(self.currentSelectedQuiz) {
-//                print(#function)
-//            }
-            
+
             
 
             self.locationsScrollView.contentSize = CGSizeMake(self.view.frame.width, self.locationsScrollView.frame.height)
@@ -55,6 +50,7 @@ import UIKit
             let frame = CGRectMake(x, 0, self.view.frame.width, locationsScrollView.frame.height)
             let quizListTableView = QuizListTableView(frame: frame, style: UITableViewStyle.Plain)
             
+            
             quizListTableView.customDelegate = self
             quizListTableView.locationName = locationName
             quizListTableView.locationImageName = locationImageName
@@ -62,21 +58,42 @@ import UIKit
             self.locationsScrollView.addSubview(quizListTableView)
             return quizListTableView
         }
+
         
         func didSelectTableViewCell(quiz: Quiz) {
             print("セルがタップされました。")
-
             self.currentSelectedQuiz = quiz
-            self.performSegueWithIdentifier("ShowToProblemViewController", sender: nil)
+            print("=======")
+            print(quiz)
+            print(quiz.title)
+            print(quiz.quiznumber)
+            print("=======")
+            print("\(self.currentSelectedQuiz?.quiznumber)hogehogehogehoge")
+            self.performSegueWithIdentifier("ShowToProblemViewController", sender: self)
         }
         
         override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
             let problemViewController = segue.destinationViewController as! ProblemViewController
-            problemViewController.quiz = self.currentSelectedQuiz
+            problemViewController.quiz = self.currentSelectedQuiz!
+            print("\(problemViewController.quiz.quiznumber)¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥")
         }
         
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
+        }
+        
+        override func viewWillAppear(animated: Bool) {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(QuizListViewController.logout))
+        }
+        
+        override func viewDidAppear(animated: Bool) {
+            super.viewDidAppear(animated)
+            
+        }
+        
+        func logout() {
+            NCMBUser.logOut()
+            performSegueWithIdentifier("modalLoginViewController", sender: self)
         }
 
 }

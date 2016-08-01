@@ -12,9 +12,7 @@ import UIKit
 
 class ProblemListTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
 
-    var quizCollection = QuizCollection.sharedInstance
-    var quizSet = Quiz.sharedInstance
-    
+    var quiz = Quiz()
     var quizName: String!
     
     override init(frame: CGRect, style: UITableViewStyle) {
@@ -48,12 +46,14 @@ class ProblemListTableView: UITableView, UITableViewDelegate, UITableViewDataSou
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("ProblemTopTableViewCell", forIndexPath: indexPath) as! ProblemTopTableViewCell
+            
 //            let quizset = quizSet.quizquestions
-            cell.quizName.text = quizSet.answer1
+//            let quiz: String = quizSet.quizquestions
+            cell.quizName.text = "test"
+
             return cell
             
         } else {
-            
             let cell = tableView.dequeueReusableCellWithIdentifier("ProblemTableViewCell", forIndexPath: indexPath) as! ProblemTableViewCell
             
 //            let quizanswer = quizCollection.quizanswers[indexPath.row]

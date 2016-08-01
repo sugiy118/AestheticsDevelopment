@@ -15,6 +15,7 @@ class TabBarController: UITabBarController {
         let blue = UIColor(red: 11.0 / 255, green: 78.0 / 255, blue: 160.0 / 255, alpha: 1.0)
         UITabBar.appearance().barTintColor = blue
         UITabBar.appearance().translucent = false
+        
     }
 
     override func didReceiveMemoryWarning() {

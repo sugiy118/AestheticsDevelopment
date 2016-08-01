@@ -1,5 +1,5 @@
 //
-//  Quiz.swift
+//  Answer.swift
 //  AestheticsDevelopment
 //
 //  Created by YU SUGIYAMA on 2016/08/01.
@@ -8,10 +8,8 @@
 
 import UIKit
 
-class Quiz: NSObject {
+class Answer: NSObject {
 
-    var title: String = ""
-    var quiznumber: Int = 0
+
     
-
 }
