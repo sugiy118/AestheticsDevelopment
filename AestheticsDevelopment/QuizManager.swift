@@ -13,6 +13,9 @@ class QuizManager: NSObject {
     static let sharedInstance = QuizManager()
     var quizzes: [Quiz] = []
     
+    //試しに作成
+    var quiz = Quiz()
+    
     func fetchQuizcategories(callback: () -> Void) {
         let query = NCMBQuery(className: "Quiz")
         query.findObjectsInBackgroundWithBlock { (objects, error) in

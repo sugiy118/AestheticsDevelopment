@@ -11,60 +11,25 @@ import UIKit
 class ProblemViewController: UIViewController{
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var problemScrollView: UIScrollView!
-    
-//
-//    let quizCollection = QuizCollection.sharedInstance
 
-//    var quiz = Quiz()
     var quiz = Quiz()
-    var quizManager = QuizManager.sharedInstance
+    var questionManager = QuestionManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("\(self.quiz.quiznumber)データを受け渡せました")
         
         self.problemScrollView.contentSize = CGSizeMake(self.view.frame.width * 5, self.problemScrollView.frame.height)
         self.problemScrollView.pagingEnabled = true
-        
-        print("\(self.quiz.quiznumber)kkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
 
         let hogehoge = setProblemListTableView(0)
         
-        quizManager.fetchQuizcategories {
-            print("callback!!!!!!!!!!!!!!!!")
-            hogehoge.reloadData()
-            
-        }
-        
-        
-        
-        
-//        quizCollection.fetchQuizquestion(quizCollection) {
-//            hogehoge.reloadData()
-//
-//            print("\(self.quiz.categoryNumber)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-//        }
-//        
-//        quiz.fetchQuizanswers(quizCollection) {
-//            hogehoge.reloadData()
-//        }
-//        
-        
-        
-        
-        setProblemListTableView(0)
-
-        
-        
-        //こちらがわではfetchはせず、QuizLisstViewControllerでfetchしたものを渡す
-//        quizCollection.fetchQuizquestion(quiz) { 
-//            hogehoge.reloadData()
-//        }
-        
-//            for object in self.quizCollection.quizanswers {
-//                let a = self.quizCollection.quizanswers[0]
-//                print(self.quiz.answer1)
-//                print(self.quiz.answer2)
+        questionManager.fetchQuizquestion(quiz) {
+                        hogehoge.reloadData()
+                        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                    }
     }
+    
     
     func setProblemListTableView(x: CGFloat) -> UITableView{
         let frame = CGRectMake(x, 0, self.view.frame.width, self.view.frame.height)

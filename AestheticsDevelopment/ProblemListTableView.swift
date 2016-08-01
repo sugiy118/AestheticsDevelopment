@@ -11,9 +11,10 @@ import UIKit
 
 
 class ProblemListTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
+    
+    let questionManager = QuestionManager.sharedInstance
 
     var quiz = Quiz()
-    var quizName: String!
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
@@ -46,10 +47,8 @@ class ProblemListTableView: UITableView, UITableViewDelegate, UITableViewDataSou
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("ProblemTopTableViewCell", forIndexPath: indexPath) as! ProblemTopTableViewCell
-            
-//            let quizset = quizSet.quizquestions
-//            let quiz: String = quizSet.quizquestions
-            cell.quizName.text = "test"
+
+            cell.quizName.text = questionManager.question.sentence1
 
             return cell
             
@@ -58,10 +57,10 @@ class ProblemListTableView: UITableView, UITableViewDelegate, UITableViewDataSou
             
 //            let quizanswer = quizCollection.quizanswers[indexPath.row]
 
-            cell.answer1Label.text = "あ"
-            cell.answer2Label.text = "い"
-            cell.answer3Label.text = "う"
-            cell.answer4Label.text = "え"
+            cell.answer1Label.text = "a"
+            cell.answer2Label.text = "う"
+            cell.answer3Label.text = "い"
+            cell.answer4Label.text = "あ"
             
             return cell
         }

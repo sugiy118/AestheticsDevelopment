@@ -14,14 +14,14 @@ import UIKit
 
 class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     weak var customDelegate: QuizListTableViewDelegate?
+    
     let quizManager = QuizManager.sharedInstance
-
-    var quizzes:Array<Quiz> = []
-
+    
     var locationName: String!
     var locationImageName: String!
     var color: UIColor!
     let blue = UIColor(red: 92.0 / 255, green: 192.0 / 255, blue: 210.0 / 255, alpha: 1.0)
+    
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
@@ -65,7 +65,7 @@ class QuizListTableView: UITableView, UITableViewDelegate, UITableViewDataSource
                     let cell = tableView.dequeueReusableCellWithIdentifier("QuizsetsTableViewCell", forIndexPath: indexPath) as! QuizsetsTableViewCell
                     let quiz = self.quizManager.quizzes[indexPath.row]
                     
-                    cell.quizNumberLabel.text = "クイズxx"
+                    cell.quizNumberLabel.text = "クイズNo.\(quiz.quiznumber)"
                     cell.titleLabel.text = quiz.title
 
                     return cell

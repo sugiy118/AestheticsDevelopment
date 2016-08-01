@@ -13,8 +13,7 @@ import UIKit
         @IBOutlet weak var locationsScrollView: UIScrollView!
 
         let quizManager = QuizManager.sharedInstance
-        let questionManager = QuestionManager.sharedInstance
-        let answerManager = AnswerManager.sharedInstance
+
         
         let tokyo = "TOKYO"
         let tokyoImageName = "tokyo_top_image.png"
@@ -25,20 +24,15 @@ import UIKit
 	
         
         var currentSelectedQuiz : Quiz?
-
         
         override func viewDidLoad() {
             super.viewDidLoad()
             let hoge = setQuizListTableView(0, locationName: self.tokyo, locationImageName: self.tokyoImageName, color: self.blue)
             
-            
             quizManager.fetchQuizcategories {
                 hoge.reloadData()
                 print(#function)
             }
-            
-
-            
 
             self.locationsScrollView.contentSize = CGSizeMake(self.view.frame.width, self.locationsScrollView.frame.height)
             self.locationsScrollView.pagingEnabled = true
@@ -49,7 +43,6 @@ import UIKit
         func setQuizListTableView(x: CGFloat, locationName: String, locationImageName: String, color: UIColor) -> UITableView{
             let frame = CGRectMake(x, 0, self.view.frame.width, locationsScrollView.frame.height)
             let quizListTableView = QuizListTableView(frame: frame, style: UITableViewStyle.Plain)
-            
             
             quizListTableView.customDelegate = self
             quizListTableView.locationName = locationName
@@ -68,14 +61,12 @@ import UIKit
             print(quiz.title)
             print(quiz.quiznumber)
             print("=======")
-            print("\(self.currentSelectedQuiz?.quiznumber)hogehogehogehoge")
             self.performSegueWithIdentifier("ShowToProblemViewController", sender: self)
         }
         
         override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
             let problemViewController = segue.destinationViewController as! ProblemViewController
             problemViewController.quiz = self.currentSelectedQuiz!
-            print("\(problemViewController.quiz.quiznumber)¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥")
         }
         
         override func didReceiveMemoryWarning() {
@@ -98,15 +89,6 @@ import UIKit
 
 }
 
-
-
-
-
-//        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//            if indexPath.section != 0 {
-//                let quiz = quizcategories[indexPath.row]
-//                self.performSegueWithIdentifier("NextSegueToQuiz", sender: nil)
-//            }
         
 
 
