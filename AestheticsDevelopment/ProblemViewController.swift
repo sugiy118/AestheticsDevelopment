@@ -16,13 +16,13 @@ class ProblemViewController: UIViewController{
             self.problemScrollView.setContentOffset(CGPointMake(self.view.frame.width * CGFloat(page_count), 0), animated: true)
             page_count += 1
         }
-//        if page_count = 5 {
-//            
+//        if page_count == 5 {
+//            self.resultViewSegue
 //        }
     }
     
     var page_count = 1
-
+    
     var quiz = Quiz()
     var questionManager = QuestionManager.sharedInstance
     var answerManager = AnswerManager.sharedInstance
@@ -114,6 +114,11 @@ class ProblemViewController: UIViewController{
             self.problemScrollView.addSubview(problemListTableView)
             return problemListTableView
         }
+    
+    
+//    func resultViewSegue(){
+//        self.performSegueWithIdentifier(ResultViewController, sender: self)
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

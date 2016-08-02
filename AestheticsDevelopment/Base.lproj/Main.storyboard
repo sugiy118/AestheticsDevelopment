@@ -66,7 +66,7 @@
         <!--Problem View Controller-->
         <scene sceneID="GEK-7c-wVC">
             <objects>
-                <viewController id="mso-Nk-xih" userLabel="Problem View Controller" customClass="ProblemViewController" customModule="AestheticsDevelopment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProblemViewController" title="ProvlemViewController" id="mso-Nk-xih" userLabel="Problem View Controller" customClass="ProblemViewController" customModule="AestheticsDevelopment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WNK-wg-tdV"/>
                         <viewControllerLayoutGuide type="bottom" id="1k4-iN-e7G"/>
@@ -75,12 +75,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ide-4L-3jE" userLabel="Problem Scroll View">
+                                <rect key="frame" x="0.0" y="74" width="375" height="544"/>
+                            </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bM-xG-cOu" userLabel="Header View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hJ-nn-HkO">
                                         <rect key="frame" x="279" y="36" width="88" height="30"/>
-                                        <state key="normal" title="次の問題へ">
+                                        <state key="normal" title="次へ">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -93,9 +96,6 @@
                                     <constraint firstAttribute="height" constant="74" id="r9Z-LT-7sw"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ide-4L-3jE" userLabel="Problem Scroll View">
-                                <rect key="frame" x="0.0" y="74" width="375" height="544"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

@@ -27,6 +27,7 @@
 		0D1BC4A11D50615A00B2F947 /* ProblemListTableView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BC4A01D50615A00B2F947 /* ProblemListTableView3.swift */; };
 		0D1BC4A41D5061A700B2F947 /* ProblemListTableView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BC4A31D5061A700B2F947 /* ProblemListTableView4.swift */; };
 		0D1BC4A61D5061CF00B2F947 /* ProblemListTableView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BC4A51D5061CF00B2F947 /* ProblemListTableView5.swift */; };
+		0D1BC4A81D508F1D00B2F947 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BC4A71D508F1D00B2F947 /* ResultViewController.swift */; };
 		0D2BBFF31D3E0EFB0077F803 /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBFF21D3E0EFB0077F803 /* MyPageTableViewController.swift */; };
 		0D2BBFF61D3E117E0077F803 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBFF41D3E117E0077F803 /* ProfileTableViewCell.swift */; };
 		0D2BBFF71D3E117E0077F803 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2BBFF51D3E117E0077F803 /* ProfileTableViewCell.xib */; };
@@ -89,6 +90,7 @@
 		0D1BC4A01D50615A00B2F947 /* ProblemListTableView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemListTableView3.swift; sourceTree = "<group>"; };
 		0D1BC4A31D5061A700B2F947 /* ProblemListTableView4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemListTableView4.swift; sourceTree = "<group>"; };
 		0D1BC4A51D5061CF00B2F947 /* ProblemListTableView5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemListTableView5.swift; sourceTree = "<group>"; };
+		0D1BC4A71D508F1D00B2F947 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		0D2BBFF21D3E0EFB0077F803 /* MyPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
 		0D2BBFF41D3E117E0077F803 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		0D2BBFF51D3E117E0077F803 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				0D01490D1D3F480000D4B68D /* QuizListViewController.swift */,
 				0D70BFC51D472FAB00C6AFD5 /* ProblemViewController.swift */,
 				0D1BC48E1D4DB37500B2F947 /* LoginViewController.swift */,
+				0D1BC4A71D508F1D00B2F947 /* ResultViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				0D1BC4951D4F42E800B2F947 /* AnswerManager.swift in Sources */,
 				0D1BC49D1D4F431B00B2F947 /* QuizManager.swift in Sources */,
 				0D1BC4931D4F42DC00B2F947 /* Answer.swift in Sources */,
+				0D1BC4A81D508F1D00B2F947 /* ResultViewController.swift in Sources */,
 				0D3CFD2E1D4A18E2002CDC2A /* ProblemListTableView.swift in Sources */,
 				0D01491B1D3F6C4C00D4B68D /* QuizsetsTableViewCell.swift in Sources */,
 				0D2BBFF61D3E117E0077F803 /* ProfileTableViewCell.swift in Sources */,
