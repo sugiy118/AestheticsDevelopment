@@ -23,6 +23,10 @@
 		0D1BC4991D4F42FE00B2F947 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BC4981D4F42FE00B2F947 /* QuestionManager.swift */; };
 		0D1BC49B1D4F430C00B2F947 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BC49A1D4F430C00B2F947 /* Quiz.swift */; };
 		0D1BC49D1D4F431B00B2F947 /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BC49C1D4F431B00B2F947 /* QuizManager.swift */; };
+		0D1BC49F1D505E0E00B2F947 /* ProblemListTableView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BC49E1D505E0E00B2F947 /* ProblemListTableView2.swift */; };
+		0D1BC4A11D50615A00B2F947 /* ProblemListTableView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BC4A01D50615A00B2F947 /* ProblemListTableView3.swift */; };
+		0D1BC4A41D5061A700B2F947 /* ProblemListTableView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BC4A31D5061A700B2F947 /* ProblemListTableView4.swift */; };
+		0D1BC4A61D5061CF00B2F947 /* ProblemListTableView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BC4A51D5061CF00B2F947 /* ProblemListTableView5.swift */; };
 		0D2BBFF31D3E0EFB0077F803 /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBFF21D3E0EFB0077F803 /* MyPageTableViewController.swift */; };
 		0D2BBFF61D3E117E0077F803 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BBFF41D3E117E0077F803 /* ProfileTableViewCell.swift */; };
 		0D2BBFF71D3E117E0077F803 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2BBFF51D3E117E0077F803 /* ProfileTableViewCell.xib */; };
@@ -81,6 +85,10 @@
 		0D1BC4981D4F42FE00B2F947 /* QuestionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		0D1BC49A1D4F430C00B2F947 /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		0D1BC49C1D4F431B00B2F947 /* QuizManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
+		0D1BC49E1D505E0E00B2F947 /* ProblemListTableView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemListTableView2.swift; sourceTree = "<group>"; };
+		0D1BC4A01D50615A00B2F947 /* ProblemListTableView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemListTableView3.swift; sourceTree = "<group>"; };
+		0D1BC4A31D5061A700B2F947 /* ProblemListTableView4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemListTableView4.swift; sourceTree = "<group>"; };
+		0D1BC4A51D5061CF00B2F947 /* ProblemListTableView5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemListTableView5.swift; sourceTree = "<group>"; };
 		0D2BBFF21D3E0EFB0077F803 /* MyPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
 		0D2BBFF41D3E117E0077F803 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		0D2BBFF51D3E117E0077F803 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
@@ -136,6 +144,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D1BC4A21D50616000B2F947 /* duplicate for scroll view */ = {
+			isa = PBXGroup;
+			children = (
+				0D1BC49E1D505E0E00B2F947 /* ProblemListTableView2.swift */,
+				0D1BC4A01D50615A00B2F947 /* ProblemListTableView3.swift */,
+				0D1BC4A31D5061A700B2F947 /* ProblemListTableView4.swift */,
+				0D1BC4A51D5061CF00B2F947 /* ProblemListTableView5.swift */,
+			);
+			name = "duplicate for scroll view";
+			sourceTree = "<group>";
+		};
 		0D2BBFED1D3E0E5E0077F803 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				0D3CFD2D1D4A18E2002CDC2A /* ProblemListTableView.swift */,
+				0D1BC4A21D50616000B2F947 /* duplicate for scroll view */,
 				0D3CFD271D4A1029002CDC2A /* ProblemTopTableViewCell.swift */,
 				0D3CFD281D4A1029002CDC2A /* ProblemTopTableViewCell.xib */,
 				0D3CFD231D4A101C002CDC2A /* ProblemTableViewCell.swift */,
@@ -425,9 +445,13 @@
 				0D1BC4971D4F42F300B2F947 /* Question.swift in Sources */,
 				0D70BFC61D472FAB00C6AFD5 /* ProblemViewController.swift in Sources */,
 				0D0149171D3F610B00D4B68D /* ContentsTopTableViewCell.swift in Sources */,
+				0D1BC4A11D50615A00B2F947 /* ProblemListTableView3.swift in Sources */,
 				0D0149141D3F584100D4B68D /* QuizListTableView.swift in Sources */,
+				0D1BC4A61D5061CF00B2F947 /* ProblemListTableView5.swift in Sources */,
 				0D2BBFF31D3E0EFB0077F803 /* MyPageTableViewController.swift in Sources */,
 				0D3CFD251D4A101C002CDC2A /* ProblemTableViewCell.swift in Sources */,
+				0D1BC49F1D505E0E00B2F947 /* ProblemListTableView2.swift in Sources */,
+				0D1BC4A41D5061A700B2F947 /* ProblemListTableView4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

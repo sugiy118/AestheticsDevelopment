@@ -29,9 +29,9 @@ class ProblemTopTableViewCell: UITableViewCell {
     
     
     func setQuizName(){
-        self.quizName.textColor = UIColor.whiteColor()
+        self.quizName.textColor = UIColor.blackColor()
         self.quizName.textAlignment = NSTextAlignment.Center
-        self.quizName.font = UIFont(name: "Helvetica-Light", size: 40)
+        self.quizName.font = UIFont(name: "Helvetica-Light", size: 15)
     }
 
 

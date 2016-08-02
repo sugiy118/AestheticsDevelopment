@@ -29,7 +29,7 @@ class ContentsTopTableViewCell: UITableViewCell {
     }
     
     func setImageMaskView(){
-        self.imageMaskView.alpha = 0.6
+        self.imageMaskView.alpha = 0.8
     }
     
     func setNameLabel(){

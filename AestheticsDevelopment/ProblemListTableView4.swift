@@ -1,20 +1,18 @@
 //
-//  ProblemListTableView.swift
+//  ProblemListTableView4.swift
 //  AestheticsDevelopment
 //
-//  Created by YU SUGIYAMA on 2016/07/28.
+//  Created by YU SUGIYAMA on 2016/08/02.
 //  Copyright © 2016年 Yu Sugiyama. All rights reserved.
 //
 
 import UIKit
 
-
-
-class ProblemListTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
+class ProblemListTableView4: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     let questionManager = QuestionManager.sharedInstance
     let answerManager = AnswerManager.sharedInstance
-
+    
     var quiz = Quiz()
     
     override init(frame: CGRect, style: UITableViewStyle) {
@@ -43,25 +41,25 @@ class ProblemListTableView: UITableView, UITableViewDelegate, UITableViewDataSou
             return 1
         }
     }
-
+    
     //セルの内容
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("ProblemTopTableViewCell", forIndexPath: indexPath) as! ProblemTopTableViewCell
-
-            cell.quizName.text = questionManager.question.sentence1
-
+            
+            cell.quizName.text = questionManager.question.sentence4
+            
             return cell
             
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("ProblemTableViewCell", forIndexPath: indexPath) as! ProblemTableViewCell
             
-//            let quizanswer = quizCollection.quizanswers[indexPath.row]
-
-            cell.answer1Label.text = answerManager.answer.answer1_question1
-            cell.answer2Label.text = answerManager.answer.answer2_question1
-            cell.answer3Label.text = answerManager.answer.answer3_question1
-            cell.answer4Label.text = answerManager.answer.answer4_question1
+            //            let quizanswer = quizCollection.quizanswers[indexPath.row]
+            
+            cell.answer1Label.text = answerManager.answer.answer1_question4
+            cell.answer2Label.text = answerManager.answer.answer2_question4
+            cell.answer3Label.text = answerManager.answer.answer3_question4
+            cell.answer4Label.text = answerManager.answer.answer4_question4
             
             return cell
         }

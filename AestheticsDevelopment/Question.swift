@@ -11,6 +11,7 @@ import UIKit
 class Question: NSObject {
     
     var quizNumber: Int = 0
+    
     var sentence1: String = ""
     var sentence2: String = ""
     var sentence3: String = ""

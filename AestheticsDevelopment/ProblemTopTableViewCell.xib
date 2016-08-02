@@ -17,7 +17,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s8B-dy-jaR" userLabel="Problem Color View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quk-aO-3HT" userLabel="Quiz Name Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quk-aO-3HT" userLabel="Quiz Name Label">
                                 <rect key="frame" x="27" y="62" width="320" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="1NT-cm-7FC"/>
