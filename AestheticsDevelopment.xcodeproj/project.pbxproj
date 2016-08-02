@@ -144,7 +144,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D1BC4A21D50616000B2F947 /* duplicate for scroll view */ = {
+		0D1BC4A21D50616000B2F947 /* DuplicateTableView */ = {
 			isa = PBXGroup;
 			children = (
 				0D1BC49E1D505E0E00B2F947 /* ProblemListTableView2.swift */,
@@ -152,7 +152,7 @@
 				0D1BC4A31D5061A700B2F947 /* ProblemListTableView4.swift */,
 				0D1BC4A51D5061CF00B2F947 /* ProblemListTableView5.swift */,
 			);
-			name = "duplicate for scroll view";
+			name = DuplicateTableView;
 			sourceTree = "<group>";
 		};
 		0D2BBFED1D3E0E5E0077F803 /* View Controller */ = {
@@ -221,7 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				0D3CFD2D1D4A18E2002CDC2A /* ProblemListTableView.swift */,
-				0D1BC4A21D50616000B2F947 /* duplicate for scroll view */,
+				0D1BC4A21D50616000B2F947 /* DuplicateTableView */,
 				0D3CFD271D4A1029002CDC2A /* ProblemTopTableViewCell.swift */,
 				0D3CFD281D4A1029002CDC2A /* ProblemTopTableViewCell.xib */,
 				0D3CFD231D4A101C002CDC2A /* ProblemTableViewCell.swift */,

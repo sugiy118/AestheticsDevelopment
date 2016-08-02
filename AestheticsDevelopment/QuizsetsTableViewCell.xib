@@ -25,7 +25,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="YlQ-Ss-ofE"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>

@@ -11,6 +11,17 @@ import UIKit
 class ProblemViewController: UIViewController{
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var problemScrollView: UIScrollView!
+    @IBAction func tapNextBtn(sender: UIButton) {
+        if page_count <= 4{
+            self.problemScrollView.setContentOffset(CGPointMake(self.view.frame.width * CGFloat(page_count), 0), animated: true)
+            page_count += 1
+        }
+//        if page_count = 5 {
+//            
+//        }
+    }
+    
+    var page_count = 1
 
     var quiz = Quiz()
     var questionManager = QuestionManager.sharedInstance
@@ -23,6 +34,7 @@ class ProblemViewController: UIViewController{
         self.problemScrollView.contentSize = CGSizeMake(self.view.frame.width * 5, self.problemScrollView.frame.height)
         self.problemScrollView.pagingEnabled = true
 
+        
         let hogehoge = setProblemListTableView(0)
         questionManager.fetchQuizquestion1(quiz) {
             hogehoge.reloadData()
@@ -37,7 +49,6 @@ class ProblemViewController: UIViewController{
         }
         answerManager.fetchQuizanswers2(quiz) {
             hogehoge2.reloadData()
-                       print("NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN")
         }
 
         let hogehoge3 = setProblemListTableView3(self.view.frame.width * 2)
@@ -65,6 +76,8 @@ class ProblemViewController: UIViewController{
         }
         
     }
+    
+    
         
         
         func setProblemListTableView(x: CGFloat) -> UITableView{
@@ -105,9 +118,4 @@ class ProblemViewController: UIViewController{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    // 以下、画面を広げる場合に必要になる情報
-    //                self.setQuizListTableView(self.view.frame.width, locationName: self.kyoto, locationImageName: self.kyotoImageName, color: self.red).reloadData()
-    //                self.setQuizListTableView(self.view.frame.width * 2,locationName: self.fukuoka, locationImageName: self.fukuokaImageName, color: self.green)
-
 }

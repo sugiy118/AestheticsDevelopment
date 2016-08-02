@@ -26,6 +26,7 @@ class ProblemListTableView: UITableView, UITableViewDelegate, UITableViewDataSou
         self.registerNib(UINib(nibName: "ProblemTableViewCell", bundle: nil), forCellReuseIdentifier: "ProblemTableViewCell")
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

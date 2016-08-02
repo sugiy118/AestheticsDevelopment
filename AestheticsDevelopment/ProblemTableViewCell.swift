@@ -14,8 +14,6 @@ class ProblemTableViewCell: UITableViewCell {
     @IBOutlet weak var answer3Label: UILabel!
     @IBOutlet weak var answer4Label: UILabel!
 
-
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
